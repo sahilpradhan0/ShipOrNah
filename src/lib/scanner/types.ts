@@ -32,7 +32,7 @@ export interface MissingRlsFinding {
 
 export interface UnprotectedRouteFinding {
   type: "unprotected_route";
-  severity: "high";
+  severity: "high" | "medium";
   filePath: string;
   lineNumber: number;
   method: string;
@@ -69,6 +69,11 @@ export interface ScanSummary {
   critical: number;
   high: number;
   medium: number;
+  /**
+   * How many of the `high` findings are route findings. They are best-effort guesses, so
+   * the health score weighs them less than certain findings. Missing on older saved scans.
+   */
+  routes?: number;
 }
 
 export interface ScanTarget {

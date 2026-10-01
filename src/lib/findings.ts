@@ -70,7 +70,7 @@ export function getFindingTitle(finding: Finding): string {
     case "weak_rls":
       return `Weak RLS policy on table '${finding.tableName}'`;
     case "unprotected_route":
-      return `Unprotected ${finding.method} route`;
+      return `${finding.method} handler without an auth check`;
     case "exposed_file":
       return "Publicly exposed sensitive file";
   }
