@@ -81,7 +81,7 @@ export default function Hero() {
     };
 
     return (
-        <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
+        <section className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
                 <div className="space-y-8">
                     <div className="space-y-4">
                         <h1 className="text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-5xl sm:leading-tight">

@@ -73,7 +73,7 @@ function Illustration() {
 
 export default function ScanNotFound() {
   return (
-    <div className="relative flex min-h-full flex-col overflow-hidden bg-zinc-950 text-zinc-100">
+    <div className="relative flex min-h-dvh flex-col overflow-hidden bg-zinc-950 text-zinc-100">
       {/* Soft glow and a faded dot grid behind the content */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-[38%] h-112 w-md -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/10 blur-3xl motion-safe:animate-pulse" />

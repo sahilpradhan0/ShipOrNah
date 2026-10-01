@@ -4,9 +4,9 @@ import Footer from "./Footer";
 
 export default function LandingPage() {
   return (
-    <div className="flex min-h-full flex-col bg-zinc-950 text-zinc-100 grow">
+    <div className="flex min-h-dvh flex-col bg-zinc-950 text-zinc-100">
       <Navbar />
-      <main className="flex-1">
+      <main className="flex flex-1 flex-col justify-center">
         <Hero />
       </main>
       <Footer />
