@@ -3,6 +3,7 @@
 import { useCallback, useState } from "react";
 import { renderReportImage, reportImageFilename } from "@/lib/report/image";
 import type { ScanResponse } from "@/lib/scanner/types";
+import { posthog } from "posthog-js";
 
 interface ShareActionsProps {
   shareUrl: string;
@@ -61,6 +62,7 @@ export default function ShareActions({ shareUrl, title, result }: ShareActionsPr
       document.body.appendChild(anchor);
       anchor.click();
       anchor.remove();
+      posthog.capture("report_downloaded");
       window.setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
     } catch {
       // Canvas unsupported or the image couldn't be created; nothing useful to show here.

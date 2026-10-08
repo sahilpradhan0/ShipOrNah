@@ -4,6 +4,7 @@ import "./globals.css";
 import { ReactLenis, useLenis } from 'lenis/react';
 import 'lenis/dist/lenis.css';
 import { Analytics } from "@vercel/analytics/next";
+import PostHogProvider from "./PostHogProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <PostHogProvider />
         <Analytics />
         <ReactLenis root />
         {children}
